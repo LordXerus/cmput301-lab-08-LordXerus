@@ -113,7 +113,7 @@ public class CustomListTest {
      * Tests that adding increases the length
      */
     @Test
-    void testCount() {
+    void testCountCities() {
         CustomList customList = new CustomList();
         assertEquals(0, customList.getCities().size());
         int i = 0;
