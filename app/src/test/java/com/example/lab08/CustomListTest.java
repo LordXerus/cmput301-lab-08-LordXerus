@@ -108,4 +108,20 @@ public class CustomListTest {
         assertEquals(0, customList.getCities().size());
         assertFalse(customList.getCities().contains(mockCity()));
     }
+
+    /**
+     * Tests that adding increases the length
+     */
+    @Test
+    void testCount() {
+        CustomList customList = new CustomList();
+        assertEquals(0, customList.getCities().size());
+        int i = 0;
+        for(City c : mockCities()) {
+            customList.addCity(c);
+            i++;
+            assertEquals(i, customList.countCities());
+
+        }
+    }
 }
