@@ -13,9 +13,7 @@ public class CustomList {
     public void addCity(City city) {
         cities.add(city);
     }
-
-    
-
-    // Will be implemented later using TDD (leave blank for now)
-    // public boolean hasCity(City city) { ... }
+    public boolean hasCity(City city) {
+        return cities.contains(city);
+    }
 }
