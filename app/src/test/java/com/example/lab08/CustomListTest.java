@@ -10,7 +10,7 @@ public class CustomListTest {
      */
     private CustomList mockCustomList() {
         CustomList CustomList = new CustomList();
-        CustomList.add(mockCity());
+        CustomList.addCity(mockCity());
         return CustomList;
     }
 
@@ -88,11 +88,11 @@ public class CustomListTest {
      * Tests that adding increases the length
      */
     @Test
-    void testAdd() {
+    void testAddCity() {
         CustomList CustomList = mockCustomList();
         assertEquals(1, CustomList.getCities().size());
         City city = new City("Regina", "Saskatchewan");
-        CustomList.add(city);
+        CustomList.addCity(city);
         assertEquals(2, CustomList.getCities().size());
         assertTrue(CustomList.getCities().contains(city));
     }

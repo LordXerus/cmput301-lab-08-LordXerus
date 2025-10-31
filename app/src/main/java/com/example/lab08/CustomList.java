@@ -1,6 +1,7 @@
 package com.example.lab08;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class CustomList {
@@ -15,5 +16,14 @@ public class CustomList {
     }
     public boolean hasCity(City city) {
         return cities.contains(city);
+    }
+
+    /**
+     * Returns a *Sorted* cities.
+     * @return Sorted list of cities
+     */
+    public List<City> getCities() {
+        List<City> list = cities;
+        return list;
     }
 }
