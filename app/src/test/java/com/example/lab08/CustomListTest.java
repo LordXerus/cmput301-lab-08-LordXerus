@@ -96,4 +96,16 @@ public class CustomListTest {
         assertEquals(2, CustomList.getCities().size());
         assertTrue(CustomList.getCities().contains(city));
     }
+
+    /**
+     * Tests that deleting decreases the length
+     */
+    @Test
+    void testDeleteCity() {
+        CustomList customList = mockCustomList();
+        assertEquals(1, customList.getCities().size());
+        customList.deleteCity(mockCity());
+        assertEquals(0, customList.getCities().size());
+        assertFalse(customList.getCities().contains(mockCity()));
+    }
 }
