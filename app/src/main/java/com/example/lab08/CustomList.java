@@ -26,4 +26,15 @@ public class CustomList {
         List<City> list = cities;
         return list;
     }
+
+    /**
+     * Deletes a City with the same name and province from the CityList.
+     * @param city a city
+     */
+    public void deleteCity(City city) {
+        if(!hasCity(city)) {
+            throw new IllegalArgumentException();
+        }
+        cities.remove(city);
+    }
 }
